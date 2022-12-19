@@ -78,13 +78,13 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <div id="hero" class="hero route bg-image" style="background-image: url(assets/img/bgggggg.jpg)">
+  <div id="hero" class="hero route bg-image" style="background-image: url(assets/img/qut.jpeg)">
     <div class="overlay-itro"></div>
     <div class="hero-content display-table">
       <div class="table-cell">
         <div class="container">
           <!--<p class="display-6 color-d">Hello, world!</p>-->
-          <h1 class="hero-title mb-4">I am Gokul Krishna</h1>
+          <h1 class="hero-title mb-4">I am <p>Gokul Krishna</p></h1>
           <p class="hero-subtitle"><span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p>
           <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
         </div>
@@ -689,31 +689,29 @@
                         <div class="row">
                           <div class="col-md-12 mb-3">
                             <div class="form-group">
-                              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                              <input type="text" name="name" class="form-control" id="name1" placeholder="Your Name">
                             </div>
                           </div>
                           <div class="col-md-12 mb-3">
                             <div class="form-group">
-                              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                              <input type="email" class="form-control" name="email" id="email1" placeholder="Your Email">
                             </div>
                           </div>
                           <div class="col-md-12 mb-3">
                             <div class="form-group">
-                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                              <input type="text" class="form-control" name="subject"  id="subject1" placeholder="Subject">
                             </div>
                           </div>
                           <div class="col-md-12">
                             <div class="form-group">
-                              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                              <textarea class="form-control" name="message" rows="5" id="message1" placeholder="Message"></textarea>
                             </div>
                           </div>
-                          <div class="col-md-12 text-center my-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                          <div class="col-md-12 text-center my-3" id="status">
+                            <p id="statMessage"></p>
                           </div>
                           <div class="col-md-12 text-center">
-                            <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
+                            <button type="submit" id="myBtn" onclick="return btnclick()" class="button button-a button-big button-rouded">Send Message</button>
                           </div>
                         </div>
                       </form>
@@ -793,7 +791,8 @@
             data:$("#submit-form").serialize(),
             method:"post",
             success:function (response){
-                alert("Form submitted successfully")
+              alert("Your message has been sent successfully. Thank you...");
+
                 window.location.reload()
                 //window.location.href="https://google.com"
             },
@@ -804,6 +803,8 @@
         })
     })
 </script>
+
+
 
 </body>
 
